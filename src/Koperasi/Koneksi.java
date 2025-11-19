@@ -13,10 +13,10 @@ import java.sql.DriverManager;
 public class Koneksi {
     public static Connection getConnection() {
         try {
-            String url = "jdbc:mysql://localhost:3306/db_koperasi";
+            String url = "jdbc:mysql://localhost:3306/db_koneksi";
             String user = "root";
             String pass = ""; // sesuaikan password MySQL kamu
-            Class.forName("com.mysql.cj.jdbc.Driver");
+            Class.forName("com.mysql.jdbc.Driver");
             return DriverManager.getConnection(url, user, pass);
         } catch (Exception e) {
             System.out.println("Koneksi gagal: " + e.getMessage());
