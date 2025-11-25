@@ -37,7 +37,7 @@ public class Anggota {
         this.simpananAwal = simpananAwal;
     }
 
-    // Getter dan Setter
+    // Get dan Set
     public int getId() {
         return id;
     }
