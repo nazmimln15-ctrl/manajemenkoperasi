@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Koperasi;
 
 import javax.swing.*;
@@ -14,7 +10,7 @@ import java.util.List;
 
 /**
  * Form Manajemen Koperasi - CRUD Anggota
- * @author LENOVO
+ * Membuat Frame dan Objek
  */
 public class MainForm extends JFrame {
     private JTextField txtNama, txtAlamat, txtTelepon, txtSimpanan;
@@ -121,7 +117,7 @@ public class MainForm extends JFrame {
         model = new DefaultTableModel(new String[]{"ID", "Nama", "Alamat", "Telepon", "Simpanan (Rp)"}, 0) {
             @Override
             public boolean isCellEditable(int row, int column) {
-                return false; // Tabel tidak bisa diedit langsung
+                return false;
             }
         };
         table = new JTable(model);
@@ -285,7 +281,6 @@ public class MainForm extends JFrame {
 
     /**
      * Validasi input form
-     * @return true jika semua input valid, false jika ada yang kosong atau tidak sesuai format
      */
     private boolean validasiInput() {
         // Cek field kosong
@@ -351,8 +346,6 @@ public class MainForm extends JFrame {
 
     /**
      * Format angka menjadi format Rupiah
-     * @param value Nilai angka
-     * @return String dengan format Rupiah
      */
     private String formatRupiah(double value) {
         return "Rp " + String.format("%,.0f", value);

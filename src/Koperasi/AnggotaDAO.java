@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Koperasi;
 import java.sql.*;
 import java.util.*;
@@ -10,15 +6,8 @@ import java.util.*;
 /**
  * Data Access Object untuk Anggota
  * Menangani semua operasi CRUD ke database
- * @author LENOVO
  */
 public class AnggotaDAO {
-    
-    /**
-     * Menambahkan data anggota baru ke database
-     * @param a Objek Anggota yang akan ditambahkan
-     * @throws SQLException Jika terjadi error database
-     */
     public void insert(Anggota a) throws SQLException {
         Connection conn = Koneksi.getConnection();
         if (conn == null) {
@@ -45,8 +34,6 @@ public class AnggotaDAO {
 
     /**
      * Mengambil semua data anggota dari database
-     * @return List berisi semua data anggota
-     * @throws SQLException Jika terjadi error database
      */
     public List<Anggota> getAll() throws SQLException {
         List<Anggota> list = new ArrayList<>();
@@ -82,8 +69,6 @@ public class AnggotaDAO {
 
     /**
      * Mengupdate data anggota berdasarkan ID
-     * @param a Objek Anggota dengan data terbaru (harus memiliki ID)
-     * @throws SQLException Jika terjadi error database
      */
     public void update(Anggota a) throws SQLException {
         Connection conn = Koneksi.getConnection();
@@ -112,8 +97,6 @@ public class AnggotaDAO {
 
     /**
      * Menghapus data anggota berdasarkan ID
-     * @param id ID anggota yang akan dihapus
-     * @throws SQLException Jika terjadi error database
      */
     public void delete(int id) throws SQLException {
         Connection conn = Koneksi.getConnection();
@@ -138,9 +121,6 @@ public class AnggotaDAO {
 
     /**
      * Mencari data anggota berdasarkan ID
-     * @param id ID anggota yang dicari
-     * @return Objek Anggota jika ditemukan, null jika tidak ditemukan
-     * @throws SQLException Jika terjadi error database
      */
     public Anggota getById(int id) throws SQLException {
         Connection conn = Koneksi.getConnection();

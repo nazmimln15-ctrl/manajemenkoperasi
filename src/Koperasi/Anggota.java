@@ -1,14 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Koperasi;
 
-/**
- * Model class untuk Anggota Koperasi
- * @author LENOVO
- */
+
 public class Anggota {
     private int id;
     private String nama;
